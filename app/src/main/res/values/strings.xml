@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iOS Launcher</string>
+    <string name="search_hint">بحث</string>
+    <string name="no_apps">ما في تطبيقات</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="label_shadow">#80000000</color>
+    <color name="dock_bg">#40FFFFFF</color>
+    <color name="search_bg">#33FFFFFF</color>
+    <color name="drawer_scrim">#CC000000</color>
+</resources>
