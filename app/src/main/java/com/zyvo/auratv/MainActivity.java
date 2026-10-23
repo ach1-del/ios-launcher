@@ -39,7 +39,8 @@ public class MainActivity extends BaseActivity {
 
     private EditText etSearch;
     private LinearLayout modeRow;
-    private TextView empty, onboarding;
+    private TextView empty;
+    private View onboarding;
     private RecyclerView rvSources, rvCategories, rvChannels;
     private ChipAdapter srcAdapter, catAdapter;
     private ChannelAdapter chAdapter;
