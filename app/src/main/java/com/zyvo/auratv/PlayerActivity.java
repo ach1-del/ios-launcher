@@ -26,6 +26,7 @@ public class PlayerActivity extends BaseActivity {
     private Prefs prefs;
     private Channel channel;
     private String sourceId;
+    private String originalUrl;
     private int resizeMode;
 
     @Override
@@ -50,8 +51,8 @@ public class PlayerActivity extends BaseActivity {
         channel.id = Ui.safe(getIntent().getStringExtra("id"));
         channel.cmd = Ui.safe(getIntent().getStringExtra("cmd"));
         channel.kind = getIntent().getIntExtra("kind", Channel.KIND_LIVE);
+        originalUrl = channel.url;
         sourceId = Ui.safe(getIntent().getStringExtra("sourceId"));
-        final String originalUrl = channel.url;
 
         tvTitle.setText(channel.name.isEmpty() ? getString(R.string.app_name) : channel.name);
         refreshFav();

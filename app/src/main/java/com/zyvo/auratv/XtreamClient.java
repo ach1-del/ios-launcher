@@ -36,7 +36,7 @@ public class XtreamClient {
     }
 
     /** Throws when the credentials are rejected. */
-    public void check() throws IOException {
+    public void check() throws IOException, org.json.JSONException {
         JSONObject o = new JSONObject(api(null));
         JSONObject info = o.optJSONObject("user_info");
         if (info == null) throw new IOException("Unexpected server response");
@@ -48,7 +48,7 @@ public class XtreamClient {
         }
     }
 
-    public List<Channel> channels(int kind) throws IOException {
+    public List<Channel> channels(int kind) throws IOException, org.json.JSONException {
         boolean vod = kind == Channel.KIND_MOVIE;
         String catAction = vod ? "get_vod_categories" : "get_live_categories";
         String listAction = vod ? "get_vod_streams" : "get_live_streams";
