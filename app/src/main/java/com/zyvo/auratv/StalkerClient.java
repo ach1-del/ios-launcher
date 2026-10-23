@@ -40,7 +40,7 @@ public class StalkerClient {
         return Fetcher.get(base + "/portal.php?" + params, headers());
     }
 
-    private JSONObject call(String params) throws IOException {
+    private JSONObject call(String params) throws IOException, org.json.JSONException {
         String body = raw(params);
         int start = body.indexOf('{');
         if (start > 0) body = body.substring(start);
