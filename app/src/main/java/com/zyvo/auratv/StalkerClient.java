@@ -36,7 +36,7 @@ public class StalkerClient {
         return h;
     }
 
-    private String raw(String params) throws IOException {
+    private String raw(String params) throws IOException, org.json.JSONException {
         return Fetcher.get(base + "/portal.php?" + params, headers());
     }
 
@@ -47,7 +47,7 @@ public class StalkerClient {
         return new JSONObject(body);
     }
 
-    public void handshake() throws IOException {
+    public void handshake() throws IOException, org.json.JSONException {
         token = "";
         JSONObject r = call("type=stb&action=handshake&token=&prehash=0");
         JSONObject js = r.optJSONObject("js");
@@ -60,7 +60,7 @@ public class StalkerClient {
         if (token.isEmpty()) throw new IOException("Portal handshake failed");
     }
 
-    public void check() throws IOException {
+    public void check() throws IOException, org.json.JSONException {
         handshake();
         JSONObject r = call("type=itv&action=get_genres");
         if (r.optJSONArray("js") == null && r.optJSONObject("js") == null) {
@@ -68,7 +68,7 @@ public class StalkerClient {
         }
     }
 
-    public List<Channel> channels() throws IOException {
+    public List<Channel> channels() throws IOException, org.json.JSONException {
         handshake();
         Map<String, String> genres = new HashMap<>();
         try {
@@ -111,7 +111,7 @@ public class StalkerClient {
     }
 
     /** Resolves a real stream URL for the portal. Returns "" when unavailable. */
-    public String createLink(String cmd) throws IOException {
+    public String createLink(String cmd) throws IOException, org.json.JSONException {
         if (token.isEmpty()) handshake();
         String q = "type=itv&action=create_link&cmd=" + URLEncoder.encode(cmd, "UTF-8")
                 + "&series=0&forced_storage=0&disable_ad=0&download=0&force_ch_link_check=0";
