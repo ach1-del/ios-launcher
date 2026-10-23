@@ -1,0 +1,9 @@
+#EXTM3U
+#EXTINF:-1,Big Buck Bunny (HLS test)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1,Apple BipBop (HLS test)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8
+#EXTINF:-1,Tears of Steel (HLS test)
+https://test-streams.mux.dev/pts_shift/master.m3u8
+#EXTINF:-1,Sintel HLS demo
+https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="label_shadow">#80000000</color>
-    <color name="dock_bg">#40FFFFFF</color>
-    <color name="search_bg">#33FFFFFF</color>
-    <color name="drawer_scrim">#CC000000</color>
+    <color name="bg1">#061020</color>
+    <color name="bg2">#0B2338</color>
+    <color name="tile">#102A44</color>
+    <color name="tile_stroke">#1C4060</color>
+    <color name="accent">#FFB74D</color>
+    <color name="accent2">#4FC3F7</color>
+    <color name="text">#EAF4FF</color>
+    <color name="sub">#8FB3CC</color>
+    <color name="ok">#3DDC97</color>
+    <color name="bad">#FF5D5D</color>
 </resources>

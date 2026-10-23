@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">iOS Launcher</string>
-    <string name="search_hint">بحث</string>
-    <string name="no_apps">ما في تطبيقات</string>
+    <string name="app_name">GN-RS8 Box</string>
+    <string name="model">GN-RS8 MiniHD Plus</string>
+    <string name="soc">GX6605S</string>
+    <string name="splash_loading">Starting system…</string>
+    <string name="menu">MAIN MENU</string>
+    <string name="hint_ok">OK  Select</string>
+    <string name="hint_back">EXIT  Back</string>
+    <string name="online">Network: online</string>
+    <string name="offline">Network: offline</string>
+    <string name="iptv">IPTV</string>
+    <string name="youtube">YouTube</string>
+    <string name="browser">Browser</string>
+    <string name="radio">Radio</string>
+    <string name="weather">Weather</string>
+    <string name="media">Media</string>
+    <string name="firmware">Firmware</string>
+    <string name="settings">Settings</string>
+
+    <string name="playlist_url">Playlist URL (M3U)</string>
+    <string name="load">Load</string>
+    <string name="loading">Loading…</string>
+    <string name="channels">Channels</string>
+    <string name="no_channels">No channels found in this playlist.</string>
+    <string name="back_to_list">Back to list</string>
+    <string name="iptv_hint">Tip: paste any M3U/M3U8 link, or pick a local .m3u file.</string>
+    <string name="pick_file">Pick file</string>
+
+    <string name="address_hint">https://…</string>
+    <string name="go">Go</string>
+    <string name="open_external">Open in app</string>
+    <string name="browser_title">Browser</string>
+    <string name="youtube_title">YouTube</string>
+
+    <string name="radio_title">Radio</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="custom_stream">Stream URL</string>
+
+    <string name="weather_title">Weather</string>
+    <string name="city_hint">City (e.g. Baghdad)</string>
+    <string name="search">Search</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="temp">Temperature</string>
+
+    <string name="media_title">Media</string>
+    <string name="nothing_playing">Nothing playing</string>
+    <string name="info_title">Firmware info</string>
+    <string name="settings_title">Settings</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="about">About</string>
+    <string name="about_text">GN-RS8 Box is a phone companion built from the GN-RS8 MiniHD Plus V3.44 firmware (GX6605S / NationalChip). It recreates the receiver menu and adds internet apps: IPTV, YouTube, browser, radio and weather.</string>
+    <string name="net_error">Network error. Check your connection.</string>
+    <string name="playing">Playing</string>
+    <string name="stop_playback">Stop</string>
+    <string name="loading_player">Opening stream…</string>
+    <string name="stream_error">This stream could not be played.</string>
+    <string name="back">Back</string>
+    <string name="fw_loading">Reading firmware data…</string>
 </resources>
