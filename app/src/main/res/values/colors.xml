@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg1">#061020</color>
-    <color name="bg2">#0B2338</color>
-    <color name="tile">#102A44</color>
-    <color name="tile_stroke">#1C4060</color>
-    <color name="accent">#FFB74D</color>
-    <color name="accent2">#4FC3F7</color>
-    <color name="text">#EAF4FF</color>
-    <color name="sub">#8FB3CC</color>
-    <color name="ok">#3DDC97</color>
-    <color name="bad">#FF5D5D</color>
+    <color name="bg">#0B0E14</color>
+    <color name="bg2">#10151F</color>
+    <color name="surface">#141A26</color>
+    <color name="surface2">#1B2231</color>
+    <color name="stroke">#232C3D</color>
+    <color name="text">#F2F5FA</color>
+    <color name="sub">#8A94A8</color>
+    <color name="accent">#7C5CFF</color>
+    <color name="accent2">#00D1FF</color>
+    <color name="ok">#2EE6A8</color>
+    <color name="danger">#FF5C7A</color>
 </resources>

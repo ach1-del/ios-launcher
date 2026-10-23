@@ -21,14 +21,14 @@ jobs:
       - name: Build
         run: gradle assembleDebug --no-daemon
       - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk gn-rs8-box.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk aura-tv.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: gn-rs8-box-apk
-          path: gn-rs8-box.apk
+          name: aura-tv-apk
+          path: aura-tv.apk
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: build
-          name: GN-RS8 Box (latest build)
-          files: gn-rs8-box.apk
+          name: Aura TV (latest build)
+          files: aura-tv.apk
           make_latest: true
