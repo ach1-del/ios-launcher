@@ -28,6 +28,7 @@ public class WebActivity extends BaseActivity {
         String title = getIntent().getStringExtra("title");
         if (url == null || url.isEmpty()) url = "https://www.google.com";
         if (title == null || title.isEmpty()) title = getString(R.string.browser_title);
+        final String startUrl = url;
 
         LinearLayout root = Ui.screen(this);
         root.addView(Ui.header(this, title));
@@ -110,11 +111,11 @@ public class WebActivity extends BaseActivity {
         });
         open.setOnClickListener(v -> {
             try {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(web.getUrl() != null ? web.getUrl() : url)));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(web.getUrl() != null ? web.getUrl() : startUrl)));
             } catch (Exception ignored) {}
         });
 
-        web.loadUrl(url);
+        web.loadUrl(startUrl);
     }
 
     private void navigate(String input) {
