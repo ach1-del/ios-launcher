@@ -9,7 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.GridLayout;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity {
         date = findViewById(R.id.tvDate);
         net = findViewById(R.id.tvNet);
         netDot = findViewById(R.id.netDot);
-        GridLayout grid = findViewById(R.id.grid);
+        LinearLayout grid = findViewById(R.id.grid);
 
         addTile(grid, R.drawable.ic_iptv, getString(R.string.iptv), IptvActivity.class);
         addTile(grid, R.drawable.ic_youtube, getString(R.string.youtube), null, "https://m.youtube.com");
@@ -57,11 +57,11 @@ public class MainActivity extends BaseActivity {
         addTile(grid, R.drawable.ic_settings, getString(R.string.settings), SettingsActivity.class);
     }
 
-    private void addTile(GridLayout grid, int icon, String label, Class<?> target) {
+    private void addTile(LinearLayout grid, int icon, String label, Class<?> target) {
         addTile(grid, icon, label, target, null);
     }
 
-    private void addTile(GridLayout grid, int icon, String label, Class<?> target, String webUrl) {
+    private void addTile(LinearLayout grid, int icon, String label, Class<?> target, String webUrl) {
         LinearLayout tile = Ui.col(this);
         tile.setGravity(Gravity.CENTER);
         tile.setBackgroundResource(R.drawable.bg_tile_ripple);
@@ -90,12 +90,13 @@ public class MainActivity extends BaseActivity {
         }
         tile.setOnClickListener(v -> startActivity(intent));
 
-        GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-        lp.width = 0;
-        lp.height = GridLayout.LayoutParams.WRAP_CONTENT;
-        lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1, 1f);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
         lp.setMargins(Ui.dp(this, 5), Ui.dp(this, 5), Ui.dp(this, 5), Ui.dp(this, 5));
-        grid.addView(tile, lp);
+        if (grid.getChildCount() == 0 || ((LinearLayout) grid.getChildAt(grid.getChildCount() - 1)).getChildCount() >= 3) {
+            LinearLayout newRow = Ui.row(this);
+            grid.addView(newRow, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        }
+        ((LinearLayout) grid.getChildAt(grid.getChildCount() - 1)).addView(tile, lp);
     }
 
     private void updateNetwork() {
